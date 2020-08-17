@@ -9,6 +9,10 @@ public class Circle extends Shape {
     public Circle(Point center, double radius){ //Constructor that creates an object with specifications.
         this.center = center;
         this.radius = radius;
+                                            
+        if (radius <= 0){                       //radius can not be 0 or less.
+            System.out.println("Warning: Your radius can not be less than 0.");
+        }
     }
 
     //Getters and setters

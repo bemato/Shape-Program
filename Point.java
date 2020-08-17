@@ -28,18 +28,18 @@ public class Point {
         System.out.println("Coordinate X " +x);
         System.out.println("Coordinate Y " +y);
     }
-    public Point add(Point a, Point b){   //Adds point coordinates and returns the added points.
+    public Point add(Point a){   //Adds point coordinates and returns the added points.
         Point resultPoint = new Point();   //The point that will result from the addition of coordinates
         
-        resultPoint.x = first.x + second.x;   //Adding x coordinates
-        resultPoint.y = first.y + second.y; //Adding y coordinates
+        resultPoint.x = this.x + a.x;   //Adding x coordinates
+        resultPoint.y = this.y + a.y; //Adding y coordinates
         return resultPoint;
     }
-    public Point subtract(Point a, Point b){   //Adds point coordinates and returns the added points.
+    public Point subtract(Point a){   //Adds point coordinates and returns the added points.
         Point resultPoint = new Point();   
         
-        resultPoint.x = a.x - b.x;   //Subtracting x coordinates 
-        resultPoint.y = a.y - b.y;  //Subtracting y coordinates
+        resultPoint.x = this.x - a.x;   //Subtracting x coordinates 
+        resultPoint.y = this.y - a.y;  //Subtracting y coordinates
         return resultPoint;
     }  
 }
