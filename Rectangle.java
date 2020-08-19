@@ -5,10 +5,10 @@ public class Rectangle extends Shape {
     private Point vertice4;     //Bottom left corner of the rectangle
 
     public Rectangle(){         //Default constructor. Creates a rectangle with vertice1 at origin. Length 1, width 2.
-        vertice1 = new Point();
+        vertice1 = new Point(1, 0);
         vertice2 = new Point(2, 0);
         vertice3 = new Point(2, -1);
-        vertice3 = new Point(0, -1);
+        vertice4 = new Point(0, -1);
     }
     public Rectangle(Point v1, Point v2, Point v3, Point v4){
         // For a shape to be a rectangle. It's width's should be the same. To be a square, the length and the width must be the same.
@@ -32,8 +32,7 @@ public class Rectangle extends Shape {
 
     // Methods and functions.
     public double findArea(){
-        return (vertice2.subtract(vertice1).getX()) * (vertice1.subtract(vertice4).getY());     //Area = length*widths => subtract the widths, get X coordinate and times 
-                                                                                                // with length.
+        return (vertice2.subtract(vertice1).getX()) * (vertice1.subtract(vertice4).getY());
     }
     public double findCircumference(){
         return 2 * (vertice2.subtract(vertice1).getX()) + (vertice1.subtract(vertice4).getY()); //Circumference = 2 * (length + width)
@@ -59,10 +58,12 @@ public class Rectangle extends Shape {
         System.out.println("Coordinatess of the corners of the bounding box:");
         
         for (int i = 0; i < coordinates.length; i++){       //Used to properly display each Point and its 
-            System.out.println("Corner" +counter+ ": ");    //coordinates.
+            System.out.print("Corner" +counter+ ": ");    //coordinates.
             coordinates[i].show();
             counter++;
+            System.out.println();
         }
+        System.out.println();
     }
 
 }   //End of class Rectangle

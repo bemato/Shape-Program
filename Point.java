@@ -25,8 +25,8 @@ public class Point {
         return y;
     }
     public void show(){ //A method to display the x and y coordinate
-        System.out.println("Coordinate X " +x);
-        System.out.println("Coordinate Y " +y);
+        System.out.print("X:" +x);
+        System.out.print(", Y:" +y);
     }
     public Point add(Point a){   //Adds point coordinates and returns the added points.
         Point resultPoint = new Point();   //The point that will result from the addition of coordinates
@@ -35,11 +35,12 @@ public class Point {
         resultPoint.y = this.y + a.y; //Adding y coordinates
         return resultPoint;
     }
-    public Point subtract(Point a){   //Adds point coordinates and returns the added points.
-        Point resultPoint = new Point();   
-        
-        resultPoint.x = this.x - a.x;   //Subtracting x coordinates 
-        resultPoint.y = this.y - a.y;  //Subtracting y coordinates
+    public Point subtract(Point a){   //substract point coordinates and returns the added points.
+        Point resultPoint = new Point();
+
+        resultPoint.x = this.x - a.x;
+        resultPoint.y = this.y - a.y;
+
         return resultPoint;
-    }  
+    }
 }

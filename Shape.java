@@ -1,3 +1,12 @@
+/**
+ * title: Shape.java
+ * description: Generic class for child shapes rectangle, square, circle.
+ * date: August 19, 2020
+ * @author Ahmed Chaudry
+ * @version 1.0
+ * @copyright 2020 Ahmed Chaudry
+ */ 
+ 
 public class Shape {
     public double findArea(){
         System.out.println("The area of the shape is given.");

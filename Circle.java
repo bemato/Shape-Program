@@ -58,9 +58,11 @@ public class Circle extends Shape {
         System.out.println("Coordinatess of the corners of the bounding box:");
         
         for (int i = 0; i < coordinates.length; i++){       //Used to properly display each Point and its 
-            System.out.println("Corner" +counter+ ": ");    //coordinates.
+            System.out.print("Corner" +counter+ ": ");    //coordinates.
             coordinates[i].show();
             counter++;
+            System.out.println();
         }
+        System.out.println();
     }
 } //End of class Circle

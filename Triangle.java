@@ -11,6 +11,10 @@ public class Triangle extends Shape {
         bottomLeft = new Point();
         bottomRight = new Point(4,0);
         top = new Point(2,2);
+
+        leftSide = Math.sqrt(Math.pow(top.subtract(bottomLeft).getX(), 2) + Math.pow(top.subtract(bottomLeft).getY(), 2));   
+        rightSide = Math.sqrt(Math.pow(top.subtract(bottomRight).getX(), 2) + Math.pow(top.subtract(bottomRight).getY(), 2));
+        thirdSide = Math.sqrt(Math.pow(bottomRight.subtract(bottomLeft).getX(), 2) + Math.pow(bottomRight.subtract(bottomLeft).getY(), 2));
     }
     public Triangle(Point bottomLeft, Point bottomRight, Point top){   //Constructor with given points.
         
@@ -27,7 +31,7 @@ public class Triangle extends Shape {
             this.bottomRight = bottomRight;
             this.top = top;
         }
-        else System.out.println("The given points do not conform to a triangle.");
+        else System.out.println("Warning: The given points do not conform to a triangle.");
     }
 
     // Methods and functions.
@@ -57,10 +61,12 @@ public class Triangle extends Shape {
         System.out.println("Coordinatess of the corners of the bounding box:");
         
         for (int i = 0; i < coordinates.length; i++){       //Used to properly display each Point and its 
-            System.out.println("Corner" +counter+ ": ");    //coordinates.
+            System.out.print("Corner" +counter+ ": ");    //coordinates.
             coordinates[i].show();
             counter++;
+            System.out.println();
         }
+        System.out.println();
     }
 
 }   //End of class Triangle
